@@ -55,6 +55,8 @@ public class RNPushNotificationHelper {
 
         if (bundle.getString("message") != null) {
             notification.setContentText(bundle.getString("message"));
+        } else if (bundle.getString("alert") != null) {
+            notification.setContentText(bundle.getString("alert"));
         } else {
             this.cancelAll();
             return;
